@@ -4,19 +4,20 @@ $("#idNav a").click(function(e){
     var id = $(this).attr('href'), 
     targetOffset = $(id).offset().top,
     menuheight = $('#idNav').innerHeight();
-    
     $('html, body').animate({
         scrollTop: targetOffset
     }, 800);
 });
+
+
 /* Function to make the scrool moving slowly when clicked*/
 $(".goto a").click(function(e) {
     e.preventDefault();
-    var id = $(this).attr("href"), targetOffset = $(id).offset().top;
+    var id = $(this).attr("href"), targetOffset = $(id).offset().top - 72;
 
     $("html, body").animate({
         scrollTop: targetOffset
-    },800);
+    },1000);
 });
 
 $(".btSend").mouseover(function(){
@@ -27,9 +28,30 @@ $(".btSend").mouseout(function(){
     $(this).removeClass("animated rubberBand");
 });
 
+function activeMenu() {
+    var documentTop = $(document).scrollTop() + 300;
+    if(documentTop > $('.pAbout').offset().top) {
+        $("#idNav li a").removeClass("active");
+        $("#aboutNav").addClass("active");
+    } 
+
+    if(documentTop > $('.pPortfolio').offset().top) {
+        $("#idNav li a").removeClass("active");
+        $("#portNav").addClass("active");
+    }
+
+    if(documentTop > $('.pContact').offset().top) {
+        $("#idNav li a").removeClass("active");
+        $("#contactNav").addClass("active");
+    }
+
+    if(documentTop < 371) {
+        $("#idNav li a").removeClass("active");
+    }
+}
+
 function fixedBar() {
     var documentTop = $(document).scrollTop() - 10;
-    var control = $(document).scrollTop() - 10;
     if(documentTop > $('.nav').offset().top) {
         $('.nav').addClass('fixed');
         $('.nav').addClass('animated slideInLeft');
@@ -95,11 +117,14 @@ function animation()
 
 animation();
 fixedBar();
-
+activeMenu();
 $(document).scroll(function(){
+    activeMenu();
     animation();
     fixedBar();
 });
+
+
 
 
 

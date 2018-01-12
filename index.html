@@ -36,13 +36,13 @@
             <div class="menu" id="menu">
                 <ul class="nav justify-content-center nav-tabs" id="idNav">
                     <li class="nav-item">
-                        <a href="#idAbout" class="nav-link">About</a>
+                        <a href="#idAbout" class="nav-link" id="aboutNav">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#idPortfolio" class="nav-link">Portfolio</a>
+                        <a href="#idPortfolio" class="nav-link" id="portNav">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#idContact" class="nav-link">Contact</a>
+                        <a href="#idContact" class="nav-link" id="contactNav">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -90,11 +90,11 @@
                             </div>
                             <!-- Second image of one of my projects -->
                             <div class="col-md-4 circleGrow anime2">
-                                <img src="_image/portImage2.png" class="img-thumbnails portImages" id="pImage2" />
+                                <a href="" target="u_blank"><img src="_image/portImage2.png" class="img-thumbnails portImages" id="pImage2" /></a>
                             </div>
                             <!-- Third image of one of my projects -->
                             <div class="col-md-4 circleGrow anime2">
-                                <img src="_image/portImage3.png" class="img-thumbnails portImages" id="pImage3" />
+                                <a href="" target="u_blank"><img src="_image/portImage3.png" class="img-thumbnails portImages" id="pImage3" /></a>
                             </div>
                             <!-- Fourth image of one of my projects -->
                             <div class="col-md-4 circleGrow anime2">
@@ -102,11 +102,11 @@
                             </div>
                             <!-- Fifth image of one of my projects -->
                             <div class="col-md-4 circleGrow anime2">
-                                <img src="_image/portImage5.png" class="img-thumbnails portImages" id="pImage5" />
+                                <a href="" target="u_blank"><img src="_image/portImage5.png" class="img-thumbnails portImages" id="pImage5" /></a>
                             </div>
                             <!-- Sixth image of one of my projects -->
                             <div class="col-md-4 circleGrow anime2">
-                                <img src="_image/portImage6.png" class="img-thumbnails portImages" id="pImage6" />
+                                <a href="" target="u_blank"><img src="_image/portImage6.png" class="img-thumbnails portImages" id="pImage6" /></a>
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                                         <br/>
                                     </div>
                                     <div class="form-group">
-                                        <textarea placeholder="Let your Mensage" id="idMensage" rows="4" name="mensage" required>
+                                        <textarea placeholder="Let your Mensage" id="idMensage" name="mensage" required>
                                         </textarea>
                                     </div>
                                     <button type="submit" class="btn btn-primary btSend"><i class="fa fa-paper-plane-o" aria-hidden="true">  Send</i>
@@ -162,7 +162,7 @@
                         <div class="midias">
                             <div class="row anime6">
                                 <div class="col-sm-3 grow">
-                                    <a href="https://www.instagram.com/anneliviia/" class="linkInstagram" target="_blank">
+                                    <a href="https://www.instagram.com/anneliviia/" class="linkInstagram text-center" target="_blank">
                                         <!-- Link to this image on the internet: 
                                         data:image/png;base64,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
                                         -->
@@ -200,7 +200,7 @@
                         </div>
                         <footer>
                             <p class="text-center"> Programmed and Written by Anne Livia da F. Macedo </p>
-                            <p class="text-center"> Anne Livia © 2018. All Rights Reversed </p>
+                            <p class="text-center"> <a href="https://www.freecodecamp.org/annelivia" target="_blank">Anne Livia</a> © 2018. All Rights Reversed </p>
                         </footer>
                     </div>
                 </div>

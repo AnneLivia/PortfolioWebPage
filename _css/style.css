@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans'); /*Only the open sans font */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display'); /*Open sans with playfair display fonts*/
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 /*
     font-family: 'Open Sans', sans-serif;
     font-family: 'Playfair Display', serif;
@@ -67,7 +68,7 @@ html, body, .container-fluid, .interface{
 
 .pAbout h1, .pPortfolio h1, .pContact h1, .pEnd h1 {
     margin-bottom: 30px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 /* Estilizando a borda das parte onde contém os textos */
@@ -145,7 +146,8 @@ ul {
     padding: 10px;
     margin: 4px;
     display: inline;
-    font-family: 'Open Sans', sans-serif;
+    transition: 0.4s ease-in-out;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .fixed {
@@ -219,7 +221,7 @@ ul {
 }
 
 .pEnd a {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Quicksand', sans-serif;
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
@@ -273,7 +275,7 @@ footer p {
 
 /*Animation Css: slideInUp, form tag*/
 .anime6 {
-    opacity: 0;
+    opacity: 1;
 }
 
 .animated {
@@ -422,7 +424,7 @@ footer p {
     }
 }
 
-@media (max-width: 568px) {
+@media (max-width: 575px) {
 
     .nav {
         position: unset;
@@ -493,9 +495,16 @@ footer p {
         transform: none;
     }
 
+    .midias a {
+        font-size: 14px;
+    }
+
+    .grow {
+        margin-bottom: 30px;
+    }
     .icon {
-        width: 120px;
-        height: 120px;
+        width: 50px;
+        height: 50px;    
     }
 
     footer p {
@@ -604,9 +613,16 @@ footer p {
         transform: none;
     }
 
+    .midias a {
+        font-size: 13px;
+    }
+
+    .grow {
+        margin-bottom: 20px;
+    }
     .icon {
-        width: 90px;
-        height: 90px;
+        width: 40px;
+        height: 40px;    
     }
 
     footer p {
