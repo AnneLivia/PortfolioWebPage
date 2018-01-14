@@ -51,7 +51,7 @@ function activeMenu() {
 }
 
 function fixedBar() {
-    var documentTop = $(document).scrollTop() - 10;
+    var documentTop = $(document).scrollTop() - 6;
     if(documentTop > $('.nav').offset().top) {
         $('.nav').addClass('fixed');
         $('.nav').addClass('animated slideInLeft');
