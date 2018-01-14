@@ -13,7 +13,7 @@ $("#idNav a").click(function(e){
 /* Function to make the scrool moving slowly when clicked*/
 $(".goto a").click(function(e) {
     e.preventDefault();
-    var id = $(this).attr("href"), targetOffset = $(id).offset().top - 72;
+    var id = $(this).attr("href"), targetOffset = $(id).offset().top - 100;
 
     $("html, body").animate({
         scrollTop: targetOffset
