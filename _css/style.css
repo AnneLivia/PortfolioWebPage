@@ -401,6 +401,30 @@ footer p {
     }
 }
 
+@media (max-width: 866px) {
+    .portImages {
+        width: 180px;
+        height: 180px;
+    }
+
+    .circleGrow:hover img{
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 806px) {
+    .portImages {
+        width: 168px;
+        height: 168px;
+    }
+
+    .circleGrow:hover img{
+        width: 168px;
+        height: 168px;
+    }
+}
+
 @media (max-width:762px) {
     .pPart1, .pPart2, .pPart3{
         min-height: 200px;
