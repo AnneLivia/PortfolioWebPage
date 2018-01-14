@@ -24,7 +24,7 @@ html, body, .container-fluid, .interface{
     background-image: url("../_image/image1.png");
     margin: 0 -13px 0 -13px;
     min-height: 100%;
-    opacity: 0.8;
+    opacity: 0.9;
     background-attachment: scroll; /*Primeira imagem no modo scroll para que a seta não saia sozinha da tela*/
 }
 
@@ -55,15 +55,18 @@ html, body, .container-fluid, .interface{
   text-align: center;
 }
 
-.pAbout p, .pPortfolio p, .pEnd p, .pContact p {
+.pAbout p, .pPortfolio p, .pContact p, .pEnd p {
     text-align: justify;
-    padding: 10px;
-    margin-top: 28px;
+    padding: 20px;
+    margin-top: 50px;
     font-family: 'Open Sans', sans-serif;
+}
+.pEnd p {
+   margin-top: 10px;
 }
 
 .pContact p {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .pAbout h1, .pPortfolio h1, .pContact h1, .pEnd h1 {
@@ -110,7 +113,7 @@ ul {
 }
 
 .pAbout p, .pContact p {
-    margin-left: 50px;
+    margin-left: 100px;
 }
 /* Styling the arrow accounts */
 .arrow {
@@ -146,8 +149,7 @@ ul {
     padding: 10px;
     margin: 4px;
     display: inline;
-    transition: 0.4s ease-in-out;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .fixed {
@@ -158,14 +160,10 @@ ul {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Styling portfolio part of the webpage */
-.pVideo {
-    margin-top: -70px;
-}
-
-/* Styling the images of my projects */
+/* Styling portfolio part of the webpage 
+   Styling the images of my projects */
 .pImages {
-    margin-top: -40px;
+    margin-top: 60px;
 }
 
 .portImages {
@@ -175,7 +173,7 @@ ul {
     height: 240px;
     border-radius: 350px;
     box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.6);
-    margin-bottom: 70px; /* Estava 45 */
+    margin-bottom: 60px; /* Estava 45 */
 }
 
 .circleGrow img{
@@ -275,7 +273,7 @@ footer p {
 
 /*Animation Css: slideInUp, form tag*/
 .anime6 {
-    opacity: 1;
+    opacity: 0;
 }
 
 .animated {
@@ -288,11 +286,11 @@ footer p {
         background-size: 90px 90px;
         width: 90px;
         height: 90px;
+        
     }
-
     .pAbout p, .pContact p {
-        margin-left: 80px;
-        margin-top: -20px;
+        margin-left: 90px;
+        margin-top: 50px;
     }
 
 
@@ -307,11 +305,11 @@ footer p {
     .arrow {
         background-size: 90px 90px;
         width: 90px;
-        height: 90px;
+        height: 90px; 
     }
-
+  
     .goto {
-        margin-left: -45px;
+        margin-left: -47px;
         margin-top: -100px;
     }
 
@@ -321,7 +319,9 @@ footer p {
     }
 
     .pAbout p, .pContact p {
+        margin-top: 50px;
         margin-left: 80px;
+      
     }
 
     .portImages {
@@ -341,14 +341,67 @@ footer p {
         margin-top: 20px;
     }
 
-    video {
-        width: 520px;
-        height: 450px;
+    
+}
+
+@media(max-width: 918px) {
+  
+    .pAbout .aBorder, .pContact .aBorder {
+        margin: 0px auto;
+        width: 750px;
+    }
+
+    .arrow {
+        background-size: 70px 70px;
+        width: 70px;
+        height: 70px; 
+    }
+  
+    .goto {
+        margin-left: -41px;
+        margin-top: -80px;
+    }
+
+    .pAbout, .pPortfolio, .pContact, .pEnd {
+        padding: 10px 10px 10px 10px;
+        text-align: center;
+    }
+
+    .pAbout p, .pContact p {
+        margin-top: 50px;
+        margin-left: 80px;
+      
+    }
+
+    .portImages {
+        width: 190px;
+        height: 190px;
+    }
+
+    .circleGrow:hover img{
+        width: 190px;
+        height: 190px;
+    }
+
+    .pContact #idContactForm input, #idContactForm textarea {
+        width: 200px;
+        padding: 10px;
+        margin-left: -1px;
+        margin-top: 20px;
+    }
+  
+    .icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    footer p {
+        margin: 1px;
+        font-size: 15px;
     }
 }
 
-@media (max-width:766px) {
-
+@media (max-width:762px) {
     .pPart1, .pPart2, .pPart3{
         min-height: 200px;
     }
@@ -363,8 +416,9 @@ footer p {
         width: 50px;
         height: 50px;
     }
+    
     .goto {
-        margin-left: -27px;
+        margin-left: -30px;
         margin-top: -60px;
     }
 
@@ -375,11 +429,11 @@ footer p {
 
     .pAbout p, .pContact p {
         margin-left: 10px;
-        margin-top: 20px;
+       margin-top: 20px;
     }
 
-    video {
-        display: none;
+    .pImages {
+        margin-top: -70px;
     }
 
     .portImages {
@@ -444,9 +498,9 @@ footer p {
         width: 50px;
         height: 50px;
     }
-
+  
     .goto {
-        margin-left: -26px;
+        margin-left: -30px;
         margin-top: -60px;
     }
 
@@ -457,13 +511,12 @@ footer p {
 
     .pAbout p, .pContact p {
         margin-left: 10px;
-        margin-top: 20px;
+       margin-top: 20px;
     }
 
-    video {
-        display: none;
+    .pImages {
+        margin-top: -70px;
     }
-
     .portImages {
         border: 1px solid white;
         width: 190px;
@@ -495,7 +548,7 @@ footer p {
         transform: none;
     }
 
-    .midias a {
+      .midias a {
         font-size: 14px;
     }
 
@@ -514,7 +567,9 @@ footer p {
 }
 
 @media (max-width: 364px) {
-
+  .container-fluid {
+    min-height: 493px;
+  }
     .nav {
         position: unset;
     }
@@ -539,10 +594,10 @@ footer p {
     }
 
     .goto {
-        margin-left: -26px;
+        margin-left: -30px;
         margin-top: -60px;
     }
-
+  
     .pAbout h1, .pPortfolio h1, .pContact h1, .pEnd h1 {
         margin-bottom: 30px;
         font-size: 25px;
@@ -559,7 +614,7 @@ footer p {
 
     .pAbout p, .pContact p {
         margin-left: 10px;
-        margin-top: 20px;
+       margin-top: 20px;
     }
 
     .perfil {   
@@ -577,10 +632,10 @@ footer p {
         font-family: 'Open Sans', sans-serif;
     }
 
-    video {
-        display: none;
+    .pImages {
+        margin-top: -60px;
     }
-
+  
     .portImages {
         border: 1px solid white;
         width: 150px;
@@ -612,7 +667,7 @@ footer p {
         -ms-transform: none;     /* To work on the browser referred to ms */
         transform: none;
     }
-
+  
     .midias a {
         font-size: 13px;
     }
